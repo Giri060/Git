@@ -711,6 +711,8 @@ public class GuestCheckout extends TestBase
 			steps.Clear(checkout.City, driver, name);
 
 			steps.Clear(checkout.State, driver, name);
+			
+			test.log(Status.INFO, MarkupHelper.createLabel("User cleared all Form fields", ExtentColor.BLUE));
 			 
 
 			//Form Validation
@@ -929,6 +931,12 @@ public class GuestCheckout extends TestBase
 			String Ptext = driver.findElement(checkout.PrepaidText).getText();
 
 			System.out.println("User navigated to Prepaid page:   "+Ptext);
+			
+			test.log(Status.INFO, MarkupHelper.createLabel("User navigated to Prepaid page", ExtentColor.BLUE));
+			
+			String LPcheckout2 = getscreen.capture(driver, "LPcheckout2");
+
+			test.addScreenCaptureFromPath(LPcheckout2);
 
 			steps.clickButton(checkout.Prepaid_Creditcard, driver, name);
 
@@ -953,6 +961,8 @@ public class GuestCheckout extends TestBase
 			String Prepaid1 = getscreen.capture(driver, "Prepaid1");
 
 			test.addScreenCaptureFromPath(Prepaid1);
+			
+			test.log(Status.INFO, MarkupHelper.createLabel("User validated Credit Card facility", ExtentColor.BLUE));
 
 			Thread.sleep(2000);
 
@@ -981,6 +991,8 @@ public class GuestCheckout extends TestBase
 			String Prepaid2 = getscreen.capture(driver, "Prepaid2");
 
 			test.addScreenCaptureFromPath(Prepaid2);
+			
+			test.log(Status.INFO, MarkupHelper.createLabel("User validated Debit Card facility", ExtentColor.BLUE));
 
 			Thread.sleep(2000);
 
@@ -999,6 +1011,8 @@ public class GuestCheckout extends TestBase
 			String Prepaid3 = getscreen.capture(driver, "Prepaid3");
 
 			test.addScreenCaptureFromPath(Prepaid3);
+			
+			test.log(Status.INFO, MarkupHelper.createLabel("User validated Netbanking facility", ExtentColor.BLUE));
 
 			try
 			{
@@ -1024,6 +1038,8 @@ public class GuestCheckout extends TestBase
 			String Prepaid4 = getscreen.capture(driver, "Prepaid4");
 
 			test.addScreenCaptureFromPath(Prepaid4);
+			
+			test.log(Status.INFO, MarkupHelper.createLabel("User validated Tez  facility", ExtentColor.BLUE));
 
 			Thread.sleep(2000);
 
@@ -1034,6 +1050,8 @@ public class GuestCheckout extends TestBase
 			String Prepaid5 = getscreen.capture(driver, "Prepaid5");
 
 			test.addScreenCaptureFromPath(Prepaid5);
+			
+			test.log(Status.INFO, MarkupHelper.createLabel("User validated UPI facility", ExtentColor.BLUE));
 
 			Thread.sleep(2000);
 
@@ -1042,6 +1060,8 @@ public class GuestCheckout extends TestBase
 			String Prepaid6 = getscreen.capture(driver, "Prepaid6");
 
 			test.addScreenCaptureFromPath(Prepaid6);
+			
+			test.log(Status.INFO, MarkupHelper.createLabel("User validated Lazy Pay facility", ExtentColor.BLUE));
 
 			Thread.sleep(2000);
 
@@ -1050,6 +1070,8 @@ public class GuestCheckout extends TestBase
 			String Prepaid7 = getscreen.capture(driver, "Prepaid7");
 
 			test.addScreenCaptureFromPath(Prepaid7);
+			
+			test.log(Status.INFO, MarkupHelper.createLabel("User validated Visa Checkout facility", ExtentColor.BLUE));
 
 			Thread.sleep(2000);
 
@@ -1069,6 +1091,8 @@ public class GuestCheckout extends TestBase
 			{
 				System.out.println("EMI is not available");
 			}
+			
+			test.log(Status.INFO, MarkupHelper.createLabel("User validated EMI facility", ExtentColor.BLUE));
 
 			Thread.sleep(2000);
 
@@ -1092,6 +1116,8 @@ public class GuestCheckout extends TestBase
 			{
 				System.out.println("Wallet working");
 			}
+			
+			test.log(Status.INFO, MarkupHelper.createLabel("User validated Wallets facility", ExtentColor.BLUE));
 
 			Thread.sleep(2000);
 
@@ -1100,6 +1126,8 @@ public class GuestCheckout extends TestBase
 			String Prepaid10 = getscreen.capture(driver, "Prepaid10");
 
 			test.addScreenCaptureFromPath(Prepaid10);
+			
+			test.log(Status.INFO, MarkupHelper.createLabel("User validated PayUmoney facility", ExtentColor.BLUE));
 
 			driver.close();
 
@@ -1465,7 +1493,7 @@ public class GuestCheckout extends TestBase
 
 			test.addScreenCaptureFromPath(GCODbuynow1);
 
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 
 			// Cash on delivery 
 			try
@@ -1519,146 +1547,199 @@ public class GuestCheckout extends TestBase
 			String GCODPrepaid10 = getscreen.capture(driver, "GCODPrepaid10");
 
 			test.addScreenCaptureFromPath(GCODPrepaid10);
+			
+			Thread.sleep(5000);
+	/*		
+			steps.Clear(checkout.FirstName, driver, name);
 
-			//Form Validation
+			steps.Clear(checkout.MobileNumber, driver, name);
 
+			steps.Clear(checkout.Email, driver, name);
+
+			steps.Clear(checkout.Zipcode, driver, name);
+
+			steps.Clear(checkout.Address, driver, name);
+
+			steps.Clear(checkout.Address2, driver, name);
+
+			steps.Clear(checkout.City, driver, name);
+
+			steps.Clear(checkout.State, driver, name);
+*/
+			
 			try
 			{
-				String Gcheck14 = driver.findElement(checkout.FirstNameerror).getText();
-
-				System.out.println(Gcheck14);
-
-				test.log(Status.INFO, MarkupHelper.createLabel("Error message:   "+Gcheck14, ExtentColor.RED));
-
-				steps.EnterText(checkout.FirstName, driver, strDataFileName, "Firstname", name);
-
-				steps.clickButton(checkout.Placeorder, driver, name);
+				String Orderconfirmation = driver.findElement(checkout.OrderConfirmText).getText();
+				
+				System.out.println("User moved to Order Confirmation page:  "+Orderconfirmation);
 			}
-			catch(Exception e )
+			catch(Exception e)
 			{
-				System.out.println("Firstname error message is not displayed");
+				//Form Validation
+
+				try
+				{
+					/*steps.Clear(checkout.FirstName, driver, name);
+
+					steps.clickButton(checkout.Placeorder, driver, name);*/
+					
+					String Gcheck14 = driver.findElement(checkout.FirstNameerror).getText();
+
+					System.out.println(Gcheck14);
+
+					test.log(Status.INFO, MarkupHelper.createLabel("Error message:   "+Gcheck14, ExtentColor.RED));
+
+					steps.EnterText(checkout.FirstName, driver, strDataFileName, "Firstname", name);
+
+					steps.clickButton(checkout.Placeorder, driver, name);
+				}
+				catch(Exception f )
+				{
+					System.out.println("Firstname error message is not displayed");
+				}
+
+				try
+				{
+					/*steps.Clear(checkout.MobileNumber, driver, name);
+
+					steps.clickButton(checkout.Placeorder, driver, name);
+					*/
+					String Gcheck15 = driver.findElement(checkout.MobileNumberError).getText();
+
+					System.out.println(Gcheck15);
+
+					test.log(Status.INFO, MarkupHelper.createLabel("Error message:   "+Gcheck15, ExtentColor.RED));
+
+					steps.EnterText(checkout.MobileNumber, driver, strDataFileName, "Mobile", name);
+
+					steps.clickButton(checkout.Placeorder, driver, name);
+
+				}
+				catch(Exception f )
+				{
+					System.out.println("Mobile Number error message is not displayed");
+				}
+
+				try
+				{
+					/*steps.Clear(checkout.Email, driver, name);
+
+					steps.clickButton(checkout.Placeorder, driver, name);*/
+					
+					String Gcheck16 = driver.findElement(checkout.EmailError).getText();
+
+					System.out.println(Gcheck16);
+
+					test.log(Status.INFO, MarkupHelper.createLabel("Error message:   "+Gcheck16, ExtentColor.RED));
+
+					steps.EnterText(checkout.Email, driver, strDataFileName, "Email", name);
+
+					steps.clickButton(checkout.Placeorder, driver, name);
+				}
+				catch(Exception f )
+				{
+					System.out.println("Email error message is not displayed");
+				}
+
+				try
+				{
+					/*steps.Clear(checkout.Zipcode, driver, name);
+
+					steps.clickButton(checkout.Placeorder, driver, name);*/
+					
+					String Gcheck17 = driver.findElement(checkout.ZipcodeError).getText();
+
+					System.out.println(Gcheck17);
+
+					test.log(Status.INFO, MarkupHelper.createLabel("Error message:   "+Gcheck17, ExtentColor.RED));
+
+					steps.EnterText(checkout.Zipcode, driver, strDataFileName, "Zipcode", name);
+
+					steps.clickButton(checkout.Placeorder, driver, name);
+				}
+				catch(Exception f )
+				{
+					System.out.println("Zipcode error message is not displayed");
+				}
+
+				try
+				{
+					/*steps.Clear(checkout.Address, driver, name);
+
+					steps.clickButton(checkout.Placeorder, driver, name);*/
+					
+					String Gcheck18 = driver.findElement(checkout.AddressError).getText();
+
+					System.out.println(Gcheck18);
+
+					test.log(Status.INFO, MarkupHelper.createLabel("Error message:   "+Gcheck18, ExtentColor.RED));
+
+					steps.EnterText(checkout.Address, driver, strDataFileName, "Address", name);
+
+					steps.clickButton(checkout.Placeorder, driver, name);
+				}
+				catch(Exception f )
+				{
+					System.out.println("Address 1  error message is not displayed");
+				}
+
+				try
+				{
+					/*steps.Clear(checkout.Address2, driver, name);
+
+					steps.clickButton(checkout.Placeorder, driver, name);*/
+					
+					String Gcheck19 = driver.findElement(checkout.Address2Error).getText();
+
+					System.out.println(Gcheck19);
+
+					test.log(Status.INFO, MarkupHelper.createLabel("Error message:   "+Gcheck19, ExtentColor.RED));
+
+					steps.EnterText(checkout.Address2, driver, strDataFileName, "Address2", name);
+
+					steps.clickButton(checkout.Placeorder, driver, name);
+				}
+				catch(Exception f )
+				{
+					System.out.println("Address 2  error message is not displayed");
+				}
+
+				try
+				{
+					String Gcheck20 = driver.findElement(checkout.CityError).getText();
+
+					System.out.println(Gcheck20);
+
+					test.log(Status.INFO, MarkupHelper.createLabel("Error message:   "+Gcheck20, ExtentColor.RED));
+
+					steps.EnterText(checkout.City, driver, strDataFileName, "City",name);
+
+					steps.clickButton(checkout.Placeorder, driver, name);
+				}
+				catch(Exception f )
+				{
+					System.out.println("City  error message is not displayed");
+				}
+
+				try
+				{
+					String Gcheck21 = driver.findElement(checkout.StateError).getText();
+
+					System.out.println(Gcheck21);
+
+					test.log(Status.INFO, MarkupHelper.createLabel("Error message:   "+Gcheck21, ExtentColor.RED));
+
+					steps.EnterText(checkout.State, driver, strDataFileName, "State",name);
+
+					steps.clickButton(checkout.Placeorder, driver, name);
+				}
+				catch(Exception f )
+				{
+					System.out.println("State  error message is not displayed");
+				}
+
 			}
-
-			try
-			{
-				String Gcheck15 = driver.findElement(checkout.MobileNumberError).getText();
-
-				System.out.println(Gcheck15);
-
-				test.log(Status.INFO, MarkupHelper.createLabel("Error message:   "+Gcheck15, ExtentColor.RED));
-
-				steps.EnterText(checkout.MobileNumber, driver, strDataFileName, "Mobile", name);
-
-				steps.clickButton(checkout.Placeorder, driver, name);
-
-			}
-			catch(Exception e )
-			{
-				System.out.println("Mobile Number error message is not displayed");
-			}
-
-			try
-			{
-				String Gcheck16 = driver.findElement(checkout.EmailError).getText();
-
-				System.out.println(Gcheck16);
-
-				test.log(Status.INFO, MarkupHelper.createLabel("Error message:   "+Gcheck16, ExtentColor.RED));
-
-				steps.EnterText(checkout.Email, driver, strDataFileName, "Email", name);
-
-				steps.clickButton(checkout.Placeorder, driver, name);
-			}
-			catch(Exception e )
-			{
-				System.out.println("Email error message is not displayed");
-			}
-
-			try
-			{
-				String Gcheck17 = driver.findElement(checkout.ZipcodeError).getText();
-
-				System.out.println(Gcheck17);
-
-				test.log(Status.INFO, MarkupHelper.createLabel("Error message:   "+Gcheck17, ExtentColor.RED));
-
-				steps.EnterText(checkout.Zipcode, driver, strDataFileName, "Zipcode", name);
-
-				steps.clickButton(checkout.Placeorder, driver, name);
-			}
-			catch(Exception e )
-			{
-				System.out.println("Zipcode error message is not displayed");
-			}
-
-			try
-			{
-				String Gcheck18 = driver.findElement(checkout.AddressError).getText();
-
-				System.out.println(Gcheck18);
-
-				test.log(Status.INFO, MarkupHelper.createLabel("Error message:   "+Gcheck18, ExtentColor.RED));
-
-				steps.EnterText(checkout.Address, driver, strDataFileName, "Address", name);
-
-				steps.clickButton(checkout.Placeorder, driver, name);
-			}
-			catch(Exception e )
-			{
-				System.out.println("Address 1  error message is not displayed");
-			}
-
-			try
-			{
-				String Gcheck19 = driver.findElement(checkout.Address2Error).getText();
-
-				System.out.println(Gcheck19);
-
-				test.log(Status.INFO, MarkupHelper.createLabel("Error message:   "+Gcheck19, ExtentColor.RED));
-
-				steps.EnterText(checkout.Address2, driver, strDataFileName, "Address2", name);
-
-				steps.clickButton(checkout.Placeorder, driver, name);
-			}
-			catch(Exception e )
-			{
-				System.out.println("Address 2  error message is not displayed");
-			}
-
-			try
-			{
-				String Gcheck20 = driver.findElement(checkout.CityError).getText();
-
-				System.out.println(Gcheck20);
-
-				test.log(Status.INFO, MarkupHelper.createLabel("Error message:   "+Gcheck20, ExtentColor.RED));
-
-				steps.EnterText(checkout.City, driver, strDataFileName, "City",name);
-
-				steps.clickButton(checkout.Placeorder, driver, name);
-			}
-			catch(Exception e )
-			{
-				System.out.println("City  error message is not displayed");
-			}
-
-			try
-			{
-				String Gcheck21 = driver.findElement(checkout.StateError).getText();
-
-				System.out.println(Gcheck21);
-
-				test.log(Status.INFO, MarkupHelper.createLabel("Error message:   "+Gcheck21, ExtentColor.RED));
-
-				steps.EnterText(checkout.State, driver, strDataFileName, "State",name);
-
-				steps.clickButton(checkout.Placeorder, driver, name);
-			}
-			catch(Exception e )
-			{
-				System.out.println("State  error message is not displayed");
-			}
-
+			
 			Thread.sleep(1000);
 
 			String GCODPrepaid11 = getscreen.capture(driver, "GCODPrepaid11");

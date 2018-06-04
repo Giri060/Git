@@ -172,6 +172,10 @@ public By Prepaid_Debitcard_CardNumber = By.id("dcard_number");
 	
 	public By PrepaidText = By.xpath("//p[contains(text(),'Choose a payment method')]");
 	
+	public By OrderConfirmText = By.xpath("//h1[contains(text(),'Order Confirmation')]");
+	
+	public By ContinueShipping = By.linkText("Continue Shopping");
+	
 	
 	
 	

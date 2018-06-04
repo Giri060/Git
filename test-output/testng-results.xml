@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="245288" started-at="2018-06-04T05:45:48Z" finished-at="2018-06-04T05:49:53Z">
+  <suite name="Default suite" duration-ms="559016" started-at="2018-06-04T07:03:04Z" finished-at="2018-06-04T07:12:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="245288" started-at="2018-06-04T05:45:48Z" finished-at="2018-06-04T05:49:53Z">
+    <test name="Default test" duration-ms="559016" started-at="2018-06-04T07:03:04Z" finished-at="2018-06-04T07:12:23Z">
       <class name="Com.Scenarios.GuestCheckout">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Com.Scenarios.GuestCheckout@dd0d4b]" name="setUp" is-config="true" duration-ms="89" started-at="2018-06-04T11:15:48Z" finished-at="2018-06-04T11:15:48Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Com.Scenarios.GuestCheckout@dd0d4b]" name="setUp" is-config="true" duration-ms="87" started-at="2018-06-04T12:33:04Z" finished-at="2018-06-04T12:33:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="before()[pri:0, instance:Com.Scenarios.GuestCheckout@dd0d4b]" name="before" is-config="true" duration-ms="119" started-at="2018-06-04T11:15:48Z" finished-at="2018-06-04T11:15:48Z">
+        <test-method status="PASS" signature="before()[pri:0, instance:Com.Scenarios.GuestCheckout@dd0d4b]" name="before" is-config="true" duration-ms="143" started-at="2018-06-04T12:33:04Z" finished-at="2018-06-04T12:33:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method status="PASS" signature="GuestPrepaidCheckoutFlow()[pri:0, instance:Com.Scenarios.GuestCheckout@dd0d4b]" name="GuestPrepaidCheckoutFlow" duration-ms="229275" started-at="2018-06-04T11:15:48Z" finished-at="2018-06-04T11:19:37Z">
+        <test-method status="PASS" signature="GuestPrepaidCheckoutFlow()[pri:0, instance:Com.Scenarios.GuestCheckout@dd0d4b]" name="GuestPrepaidCheckoutFlow" duration-ms="272512" started-at="2018-06-04T12:33:04Z" finished-at="2018-06-04T12:37:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GuestPrepaidCheckoutFlow -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Com.Scenarios.GuestCheckout@dd0d4b]" name="getResult" is-config="true" duration-ms="2510" started-at="2018-06-04T11:19:37Z" finished-at="2018-06-04T11:19:40Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Com.Scenarios.GuestCheckout@dd0d4b]" name="getResult" is-config="true" duration-ms="2501" started-at="2018-06-04T12:37:36Z" finished-at="2018-06-04T12:37:39Z">
           <params>
             <param index="0">
               <value>
@@ -30,11 +30,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="GuestCODCheckoutFlow()[pri:1, instance:Com.Scenarios.GuestCheckout@dd0d4b]" name="GuestCODCheckoutFlow" duration-ms="8759" started-at="2018-06-04T11:19:40Z" finished-at="2018-06-04T11:19:49Z">
+        <test-method status="PASS" signature="GuestCODCheckoutFlow()[pri:1, instance:Com.Scenarios.GuestCheckout@dd0d4b]" name="GuestCODCheckoutFlow" duration-ms="280231" started-at="2018-06-04T12:37:39Z" finished-at="2018-06-04T12:42:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GuestCODCheckoutFlow -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Com.Scenarios.GuestCheckout@dd0d4b]" name="getResult" is-config="true" duration-ms="2501" started-at="2018-06-04T11:19:49Z" finished-at="2018-06-04T11:19:51Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Com.Scenarios.GuestCheckout@dd0d4b]" name="getResult" is-config="true" duration-ms="2502" started-at="2018-06-04T12:42:19Z" finished-at="2018-06-04T12:42:22Z">
           <params>
             <param index="0">
               <value>
@@ -45,11 +45,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="after()[pri:0, instance:Com.Scenarios.GuestCheckout@dd0d4b]" name="after" is-config="true" duration-ms="2099" started-at="2018-06-04T11:19:51Z" finished-at="2018-06-04T11:19:53Z">
+        <test-method status="PASS" signature="after()[pri:0, instance:Com.Scenarios.GuestCheckout@dd0d4b]" name="after" is-config="true" duration-ms="1097" started-at="2018-06-04T12:42:22Z" finished-at="2018-06-04T12:42:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Com.Scenarios.GuestCheckout@dd0d4b]" name="tearDown" is-config="true" duration-ms="248" started-at="2018-06-04T11:19:53Z" finished-at="2018-06-04T11:19:53Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Com.Scenarios.GuestCheckout@dd0d4b]" name="tearDown" is-config="true" duration-ms="265" started-at="2018-06-04T12:42:23Z" finished-at="2018-06-04T12:42:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
