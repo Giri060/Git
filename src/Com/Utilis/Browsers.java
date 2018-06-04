@@ -62,14 +62,26 @@ public class Browsers {
 			System.setProperty("phantomjs.binary.path", file.getAbsolutePath());		
 			driver = new PhantomJSDriver();	
 		}		
+		else if (browser.equalsIgnoreCase("chromeprofile"))
+		{
+			System.setProperty("webdriver.chrome.driver","/usr/lib/chromium-browser/chromedriver");
+			ChromeOptions options = new ChromeOptions();
+			// options.addArguments("user-data-dir=C:/Users/user_name/AppData/Local/Google/Chrome/User Data");
+
+		options.addArguments("user-data-dir=/home/giri/.config/chromium/Profile 8");
+			options.addArguments("--start-maximized");
+			options.addArguments("disable-infobars"); 
+			driver = new ChromeDriver(options);
+		}
 		else if (browser.equalsIgnoreCase("chrome"))
 		{
 			System.setProperty("webdriver.chrome.driver","/usr/lib/chromium-browser/chromedriver");
 			ChromeOptions options = new ChromeOptions();
 			// options.addArguments("user-data-dir=C:/Users/user_name/AppData/Local/Google/Chrome/User Data");
 
-			options.addArguments("user-data-dir=/home/giri/.config/chromium/Profile 8");
+		//	options.addArguments("user-data-dir=/home/giri/.config/chromium/Profile 8");
 			options.addArguments("--start-maximized");
+			options.addArguments("--disable-plugins");
 			options.addArguments("disable-infobars"); 
 			driver = new ChromeDriver(options);
 		}

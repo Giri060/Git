@@ -170,6 +170,7 @@ public By Prepaid_Debitcard_CardNumber = By.id("dcard_number");
 	public By Remove = By.linkText("Remove");
 	
 	
+	public By PrepaidText = By.xpath("//p[contains(text(),'Choose a payment method')]");
 	
 	
 	

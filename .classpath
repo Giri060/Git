@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="/home/giri/Testing/Git/Libraries/ATExcelReport.jar"/>
+	<classpathentry kind="lib" path="/home/giri/Testing/Git/Libraries/bson-3.3.0.jar"/>
+	<classpathentry kind="lib" path="/home/giri/Testing/Git/Libraries/extentreports-3.0.6.jar"/>
+	<classpathentry kind="lib" path="/home/giri/Testing/Git/Libraries/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="/home/giri/Testing/Git/Libraries/jfreechart.jar"/>
+	<classpathentry kind="lib" path="/home/giri/Testing/Git/Libraries/jfreechart-dependency-jcommon-1.0.12.jar"/>
+	<classpathentry kind="lib" path="/home/giri/Testing/Git/Libraries/jxl-2.6.jar"/>
+	<classpathentry kind="lib" path="/home/giri/Testing/Git/Libraries/poi-3.15.jar"/>
+	<classpathentry kind="lib" path="/home/giri/Testing/Git/Libraries/selenium-server-standalone-2.53.0.jar"/>
+	<classpathentry kind="lib" path="/home/giri/Testing/Git/Libraries/testng-6.9.12.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

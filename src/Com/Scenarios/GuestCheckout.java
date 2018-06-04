@@ -245,7 +245,7 @@ public class GuestCheckout extends TestBase
 	{
 		Browsers b = new Browsers();
 
-		this.driver = b.getBrowsers("chrome");		 
+		this.driver = b.getBrowsers("chromeprofile");		 
 	}
 
 	@Test(priority=0)
@@ -271,7 +271,7 @@ public class GuestCheckout extends TestBase
 
 			Thread.sleep(1000);
 
-/*			String Parent = driver.getWindowHandle();
+			String Parent = driver.getWindowHandle();
 
 			steps.clickButton(home.Mydreamstore, driver, name);
 
@@ -562,23 +562,7 @@ public class GuestCheckout extends TestBase
 
 			Thread.sleep(2000);
 			
-			steps.Clear(checkout.FirstName, driver, name);
-			
-			steps.Clear(checkout.MobileNumber, driver, name);
-			
-			steps.Clear(checkout.Email, driver, name);
-			
-			steps.Clear(checkout.Zipcode, driver, name);
-			
-			steps.Clear(checkout.Address, driver, name);
-			
-			steps.Clear(checkout.Address2, driver, name);
-			
-			steps.Clear(checkout.City, driver, name);
-			
-			steps.Clear(checkout.State, driver, name);
-			
-			
+
 
 			// Debit card option
 
@@ -710,11 +694,35 @@ public class GuestCheckout extends TestBase
 			}
 
 			Thread.sleep(2000);
+			
+			
+			steps.Clear(checkout.FirstName, driver, name);
+
+			steps.Clear(checkout.MobileNumber, driver, name);
+
+			steps.Clear(checkout.Email, driver, name);
+
+			steps.Clear(checkout.Zipcode, driver, name);
+
+			steps.Clear(checkout.Address, driver, name);
+
+			steps.Clear(checkout.Address2, driver, name);
+
+			steps.Clear(checkout.City, driver, name);
+
+			steps.Clear(checkout.State, driver, name);
+			 
 
 			//Form Validation
 
 			try
 			{
+				steps.Clear(checkout.FirstName, driver, name);
+
+				steps.clickButton(checkout.Placeorder, driver, name);
+
+				Thread.sleep(2000);
+
 				String Gcheck14 = driver.findElement(checkout.FirstNameerror).getText();
 
 				System.out.println(Gcheck14);
@@ -732,6 +740,10 @@ public class GuestCheckout extends TestBase
 
 			try
 			{
+				steps.Clear(checkout.MobileNumber, driver, name);
+
+				steps.clickButton(checkout.Placeorder, driver, name);
+
 				String Gcheck15 = driver.findElement(checkout.MobileNumberError).getText();
 
 				System.out.println(Gcheck15);
@@ -750,6 +762,10 @@ public class GuestCheckout extends TestBase
 
 			try
 			{
+				steps.Clear(checkout.Email, driver, name);
+
+				steps.clickButton(checkout.Placeorder, driver, name);
+
 				String Gcheck16 = driver.findElement(checkout.EmailError).getText();
 
 				System.out.println(Gcheck16);
@@ -767,6 +783,10 @@ public class GuestCheckout extends TestBase
 
 			try
 			{
+				steps.Clear(checkout.Zipcode, driver, name);
+
+				steps.clickButton(checkout.Placeorder, driver, name);
+
 				String Gcheck17 = driver.findElement(checkout.ZipcodeError).getText();
 
 				System.out.println(Gcheck17);
@@ -784,6 +804,10 @@ public class GuestCheckout extends TestBase
 
 			try
 			{
+				steps.Clear(checkout.Address, driver, name);
+
+				steps.clickButton(checkout.Placeorder, driver, name);
+
 				String Gcheck18 = driver.findElement(checkout.AddressError).getText();
 
 				System.out.println(Gcheck18);
@@ -801,6 +825,10 @@ public class GuestCheckout extends TestBase
 
 			try
 			{
+				steps.Clear(checkout.Address2, driver, name);
+
+				steps.clickButton(checkout.Placeorder, driver, name);
+
 				String Gcheck19 = driver.findElement(checkout.Address2Error).getText();
 
 				System.out.println(Gcheck19);
@@ -896,7 +924,11 @@ public class GuestCheckout extends TestBase
 
 			//steps.clickButton(checkout.Placeorder, driver, name);
 
-			Thread.sleep(2000);
+			Thread.sleep(4000);
+
+			String Ptext = driver.findElement(checkout.PrepaidText).getText();
+
+			System.out.println("User navigated to Prepaid page:   "+Ptext);
 
 			steps.clickButton(checkout.Prepaid_Creditcard, driver, name);
 
@@ -928,7 +960,7 @@ public class GuestCheckout extends TestBase
 
 			steps.selectDropdown(checkout.Prepaid_Debitcard_SelectCard, driver, strDataFileName, "DebitcardType", name);
 
-			steps.clickButton(checkout.Prepaid_Debitcard_Paynow, driver, name);
+			//	steps.clickButton(checkout.Prepaid_Debitcard_Paynow, driver, name);
 
 			Thread.sleep(1000);
 
@@ -1072,7 +1104,7 @@ public class GuestCheckout extends TestBase
 			driver.close();
 
 			driver.switchTo().window(Parent);
-*/
+
 			//		test.log(Status.INFO, MarkupHelper.createLabel("User clicked on Cash on Delivery link", ExtentColor.BLUE));
 
 			GPCLoginUserstatus = passstatus;
@@ -1103,7 +1135,7 @@ public class GuestCheckout extends TestBase
 	}
 
 
-	//@Test(priority=1)
+	@Test(priority=1)
 	public void GuestCODCheckoutFlow() throws Exception
 	{
 		String name = new Object(){}.getClass().getEnclosingMethod().getName();
@@ -1131,7 +1163,7 @@ public class GuestCheckout extends TestBase
 			steps.clickButton(checkout.Cart, driver, name);
 
 			Thread.sleep(2000);
-			/*
+
 			try
 			{
 				String ok = driver.findElement(checkout.MDSWalletPOPupOK).getText();
@@ -1150,7 +1182,7 @@ public class GuestCheckout extends TestBase
 			}
 
 
-					steps.clickButton(home.Mydreamstore, driver, name);
+			steps.clickButton(home.Mydreamstore, driver, name);
 
 			Thread.sleep(2000);
 
@@ -1636,7 +1668,7 @@ public class GuestCheckout extends TestBase
 			steps.clickButton(checkout.Cart, driver, name);
 
 			steps.clickButton(checkout.Remove, driver, name);
-			 */
+
 			GCODLoginUserstatus = passstatus;
 
 			Assert.assertTrue(true);
