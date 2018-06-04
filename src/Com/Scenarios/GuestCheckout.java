@@ -1523,6 +1523,8 @@ public class GuestCheckout extends TestBase
 				test.addScreenCaptureFromPath(GCODbuynow3);
 
 				steps.clickButton(checkout.Cashondelivery, driver, name);
+				
+				System.out.println("user clicked on cachondelivery link");
 
 				test.log(Status.INFO, MarkupHelper.createLabel("User clicked on Cash on Delivery link", ExtentColor.BLUE));
 
@@ -1579,9 +1581,9 @@ public class GuestCheckout extends TestBase
 
 				try
 				{
-					/*steps.Clear(checkout.FirstName, driver, name);
+					steps.Clear(checkout.FirstName, driver, name);
 
-					steps.clickButton(checkout.Placeorder, driver, name);*/
+					steps.clickButton(checkout.Placeorder, driver, name);
 					
 					String Gcheck14 = driver.findElement(checkout.FirstNameerror).getText();
 
@@ -1600,10 +1602,10 @@ public class GuestCheckout extends TestBase
 
 				try
 				{
-					/*steps.Clear(checkout.MobileNumber, driver, name);
+					steps.Clear(checkout.MobileNumber, driver, name);
 
 					steps.clickButton(checkout.Placeorder, driver, name);
-					*/
+					
 					String Gcheck15 = driver.findElement(checkout.MobileNumberError).getText();
 
 					System.out.println(Gcheck15);
@@ -1622,9 +1624,9 @@ public class GuestCheckout extends TestBase
 
 				try
 				{
-					/*steps.Clear(checkout.Email, driver, name);
+					steps.Clear(checkout.Email, driver, name);
 
-					steps.clickButton(checkout.Placeorder, driver, name);*/
+					steps.clickButton(checkout.Placeorder, driver, name);
 					
 					String Gcheck16 = driver.findElement(checkout.EmailError).getText();
 
@@ -1643,9 +1645,9 @@ public class GuestCheckout extends TestBase
 
 				try
 				{
-					/*steps.Clear(checkout.Zipcode, driver, name);
+					steps.Clear(checkout.Zipcode, driver, name);
 
-					steps.clickButton(checkout.Placeorder, driver, name);*/
+					steps.clickButton(checkout.Placeorder, driver, name);
 					
 					String Gcheck17 = driver.findElement(checkout.ZipcodeError).getText();
 
@@ -1664,9 +1666,9 @@ public class GuestCheckout extends TestBase
 
 				try
 				{
-					/*steps.Clear(checkout.Address, driver, name);
+					steps.Clear(checkout.Address, driver, name);
 
-					steps.clickButton(checkout.Placeorder, driver, name);*/
+					steps.clickButton(checkout.Placeorder, driver, name);
 					
 					String Gcheck18 = driver.findElement(checkout.AddressError).getText();
 
@@ -1685,9 +1687,9 @@ public class GuestCheckout extends TestBase
 
 				try
 				{
-					/*steps.Clear(checkout.Address2, driver, name);
+					steps.Clear(checkout.Address2, driver, name);
 
-					steps.clickButton(checkout.Placeorder, driver, name);*/
+					steps.clickButton(checkout.Placeorder, driver, name);
 					
 					String Gcheck19 = driver.findElement(checkout.Address2Error).getText();
 
